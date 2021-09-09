@@ -6,7 +6,7 @@
 
     <CountrySelect @get-country="getCountryData" :countries="countries" />
 
-    <button class="bg-green-700 text-white rounded p-3 mt-10 focus:outline-none hover:bg-green-600">
+    <button v-if="stats.Country" class="bg-green-700 text-white rounded p-3 mt-10 focus:outline-none hover:bg-green-600">
       Clear Country
     </button>
   </main>
