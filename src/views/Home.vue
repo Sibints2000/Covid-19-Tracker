@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <main v-if="!loading">
     <h1>Hello World</h1>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -28,7 +28,11 @@ export default {
   },
   async created() {
     const data = await this.fetchCovidData()
-    console.log(data)
+    
+    this.dataDate = data.Date
+    this.stats = data.global
+    this.countries = data.Countries
+    this.loading = false
   },
 }
 </script>
