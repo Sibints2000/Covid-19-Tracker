@@ -18,8 +18,9 @@ export default {
       return data
     }
   },
-  created() {
-    console.log()
+  async created() {
+    const data = await this.fetchCovidData()
+    console.log(data)
   }
 }
 </script>
