@@ -16,7 +16,7 @@ export default {
       dataDate: '',
       stats: {},
       countries: [],
-      loadingImage: require('')
+      loadingImage: require('../assets/hourglass.gif')
     }
   },
   methods: {
