@@ -8,8 +8,16 @@
 
 export default {
   name: 'Home',
-  components: {
-    
+  components: {},
+  data(){
+    return {
+      loading: true,
+      title: 'Global',
+      dataDate: '',
+      stats: {},
+      countries: [],
+      loadingImage: require('')
+    }
   },
   methods: {
     async fetchCovidData() {
@@ -21,6 +29,6 @@ export default {
   async created() {
     const data = await this.fetchCovidData()
     console.log(data)
-  }
+  },
 }
 </script>
